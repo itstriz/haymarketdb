@@ -4,6 +4,7 @@ class Shop(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
     updated_at = models.DateTimeField(auto_now_add=True, editable=False)
     name = models.CharField(max_length=255)
+    city = models.CharField(max_length=50, blank=True, null=True)
 
     def __unicode__(self):
         return self.name
