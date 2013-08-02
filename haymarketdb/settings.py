@@ -1,6 +1,3 @@
-import os
-
-SITE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -13,8 +10,8 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': os.path.join(SITE_DIR, 'members.db'),             # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': '',
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
@@ -158,3 +155,9 @@ LOGGING = {
         },
     }
 }
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
+

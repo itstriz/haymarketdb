@@ -16,6 +16,8 @@ class Member(models.Model):
     last_name = models.CharField(max_length=50)
     middle_name = models.CharField(max_length=50)
     start_date = models.DateTimeField('membership started')
+    phone = models.CharField(max_length=20, blank=True, null=True)
+    email = models.EmailField(blank=True, null=True)
 
     def __unicode__(self):
         return self.last_name + ", " + self.first_name
