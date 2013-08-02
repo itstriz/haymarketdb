@@ -1,4 +1,6 @@
-# Django settings for haymarketdb project.
+import os
+
+SITE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
