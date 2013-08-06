@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Membership{% endblock %}
+{% block content %}
+     <h1>Shop Listing</h1>
+     <ul>
+     {% for shop in shop_list %}
+        <li>{{ shop.name }}</li>
+     {% endfor %}
+     </ul>
+{% endblock %}

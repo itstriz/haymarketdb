@@ -1,5 +1,9 @@
 from django.contrib import admin
 from membership.models import Shop, Member
 
-admin.site.register(Shop)
+class ShopAdmin(admin.ModelAdmin):
+    fields = ['name', 'city']
+    list_display = ('name', 'city')
+
+admin.site.register(Shop, ShopAdmin)
 admin.site.register(Member)

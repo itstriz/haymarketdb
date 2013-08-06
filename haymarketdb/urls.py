@@ -5,6 +5,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
+    url(r'^membership/', include('membership.urls')),
     # Examples:
     # url(r'^$', 'haymarketdb.views.home', name='home'),
     # url(r'^haymarketdb/', include('haymarketdb.foo.urls')),
