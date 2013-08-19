@@ -1,10 +1,25 @@
 {% extends "base.html" %}
 {% block title %}Membership{% endblock %}
 {% block content %}
-     <h1>Shop Listing</h1>
-     <ul>
-     {% for shop in shop_list %}
-        <li>{{ shop.name }}</li>
-     {% endfor %}
-     </ul>
+     <h2 class="page-header">Shops <small>A listing of all shops</small></h2>
+     {% if shop_list %}
+     <table class="table table-bordered">
+       <thead>
+	 <tr>
+	   <th>#</th>
+	   <th>Name</th>
+	 </tr>
+       </thead>
+       <tbody>
+	 {% for shop in shop_list %}
+            <tr>
+	      <td>{{ forloop.counter }}</td>
+	      <td><a href="/membership/shops/{{ shop.id }}">{{ shop.name }}</a></td>
+	    </tr>
+	 {% endfor %}
+       </tbody>
+     </table>
+     {% else %}
+     <div class="alert alert-info">There are no shops listed.</div>
+     {% endif %}
 {% endblock %}
