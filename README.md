@@ -12,3 +12,15 @@ shop structures (leaders, followers, etc.) and dealing with edge case scenarios 
 Resources
 ---------
 Currently this project is being developed with the Django Web Framework
+
+## Models
+* Shop
+* Member
+* Bill
+* Payments
+
+## Views
+* A page listing all shops
+* A page listing all members
+* A shop page listing all members in a shop
+* A member page listing all billings and payments
